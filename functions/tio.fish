@@ -3,7 +3,7 @@ function __tio_usage
     echo "       tio <slug> <url>"
     echo "       tio <url>"
     echo
-    echo "Tip: ``https://´´ and ``github.com´´ are optional."
+    echo "Hint: \"https://\" and \"github.com\" are optional."
     functions -e __tio_usage
 end
 
@@ -46,12 +46,25 @@ function tio -d "Create a git.io/<slug> from a GitHub url"
     end
 
     if test -z "$url"
-        echo "tio: I need the url to shorten" > /dev/stderr
+        echo "tio: I need a url." > /dev/stderr
         __tio_usage > /dev/stderr
         return 1
     end
 
-    set -l gitio_url (
+    if test ! -z "$slug"
+        set result (fish -c "
+            curl -L git.io/$slug ^ /dev/null &
+            await
+        ")
+
+        if test "$result" != "No url found for $slug"
+            echo "tio: No luck! It seems '$slug' is already assigned to a different url." > /dev/stderr
+            return 1
+        end
+    end
+
+
+    set -l slug_url (
 
         fish -c "
 
@@ -74,20 +87,14 @@ function tio -d "Create a git.io/<slug> from a GitHub url"
     ')
 
     if test "$status" -eq 0
-        echo "$gitio_url"
+        echo "$slug_url"
     else
-        if test -z "$gitio_url"
-            echo "tio: I couldn't create a short url for:" > /dev/stderr
+        if test -z "$slug_url"
+            echo "tio: I couldn't create a slug url for:" > /dev/stderr
             echo "     '$url'" > /dev/stderr
         else
-            echo "$gitio_url"
-
-            if test ! -z "$slug"
-                set -l uline (set_color -u)
-                set -l nc (set_color normal)
-
-                echo "tio: I couldn't assign the slug: '$slug' to your url." > /dev/stderr
-            end
+            echo "$slug_url"
+            echo "tio: I can't assign a new slug to this url." > /dev/stderr
         end
 
         return 1
