@@ -9,7 +9,7 @@ tio *url*<br>
 
 ## USAGE
 
-tio accepts a url ("https://github.com" is optional) and a *slug*, and attempts to shorten the url using the git.io service. If the operation is successful, the short url is printed to stdout.
+tio accepts a url (the "https://github.com" part is optional) and a *slug*, and attempts to shorten the url using the git.io service. If the operation is successful, the short url is printed to stdout.
 
 ```
 tio short owner/repo
