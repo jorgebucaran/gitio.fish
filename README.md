@@ -2,7 +2,18 @@
 
 # Tio
 
-**Tio** is a [git.io] slug url cli for fish.
+Create a git.io/slug from a GitHub url.
+
+Before
+```
+https://raw.githubusercontent.com/fisherman/fisherman/master/fisher.fish
+```
+
+After
+
+```
+https://git.io/fisherman
+```
 
 ## Install
 

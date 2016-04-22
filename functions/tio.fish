@@ -11,6 +11,7 @@ function tio -d "Create a git.io/<slug> from a GitHub url"
     if set -q argv[3]
         echo "tio: I wasn't expecting this argument '$argv[3]'." > /dev/stderr
         __tio_usage > /dev/stderr
+
         return 1
     end
 
@@ -25,10 +26,10 @@ function tio -d "Create a git.io/<slug> from a GitHub url"
 
     for i in $argv
         switch "$i"
-            case http{,s}://github.com\* http{s,}://gist.\?\*
+            case http{,s}://github.com\* http{s,}://gist.\?\* http{s,}://raw.githubusercontent.\?\*
                 set url "$i"
 
-            case github.com\* gist.\?\*
+            case github.com\* gist.\?\* raw.githubusercontent.\?\*
                 set url "https://$i"
 
             case http{,s}://\?\*
