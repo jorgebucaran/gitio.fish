@@ -1,0 +1,61 @@
+.\" generated with Ronn/v0.7.3
+.\" http://github.com/rtomayko/ronn/tree/0.7.3
+.
+.TH "TIO" "1" "April 2016" "" "tio"
+.
+.SH "NAME"
+\fBtio\fR \- Create a git\.io/slug from a GitHub url
+.
+.SH "SYNOPSIS"
+tio \fIurl\fR \fIslug\fR
+.
+.br
+tio \fIslug\fR \fIurl\fR
+.
+.br
+tio \fIurl\fR
+.
+.br
+.
+.SH "USAGE"
+tio accepts a url ("https://github\.com" is optional) and a \fIslug\fR, and attempts to shorten the url using the git\.io service\. If the operation is successful, the short url is printed to stdout\.
+.
+.IP "" 4
+.
+.nf
+
+tio short owner/repo
+https://git\.io/short
+.
+.fi
+.
+.IP "" 0
+.
+.P
+or
+.
+.IP "" 4
+.
+.nf
+
+tio owner/repo short
+https://git\.io/short
+.
+.fi
+.
+.IP "" 0
+.
+.SS "NO SLUG"
+If you don\'t need a slug, the following works too\.
+.
+.IP "" 4
+.
+.nf
+
+tio owner/repo
+https://git\.io/vwlMo
+.
+.fi
+.
+.IP "" 0
+
