@@ -12,6 +12,7 @@ https://raw.githubusercontent.com/fisherman/fisherman/master/fisher.fish
 After
 
 ```
+tio fisherman https://raw.githubusercontent.com/fisherman/fisherman/master/fisher.fish
 https://git.io/fisherman
 ```
 
