@@ -20,7 +20,7 @@ set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
 curl https://git.io/gitio.fish --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/gitio.fish
 ```
 
-To uninstall it from your system, remove the `gitio.fish` file and erase the function.
+To uninstall it from your system, remove `gitio.fish` and erase the function.
 
 ```
 rm -f $XDG_CONFIG_HOME/fish/functions/gitio.fish && functions -e gitio
@@ -33,7 +33,9 @@ rm -f $XDG_CONFIG_HOME/fish/functions/gitio.fish && functions -e gitio
 
 ## Usage
 
-You can use `gitio` to create a tiny URL for your GitHub profile page, repositories, issues, release notes, tarballs, gists, raw files, etc. If the command exits successfully, the generated URL will be displayed on your console.
+You want to create a tiny URL for your GitHub profile page, repositories, issues, release notes, tarballs, gists, etc.
+
+The `gitio` command takes the code (alias) you want to use, followed by an equal sign, and a GitHub URL. If the command exits successfully, the generated URL will be displayed on your console.
 
 ```fish
 gitio code=url
@@ -45,9 +47,9 @@ The tiny URL for this repository was created using the following command.
 gitio fish-gitio=https://github.com/jorgebucaran/fish-gitio
 ```
 
-Don't need a custom code? If you provide only the URL, a random 4-letter code will be generated for you by Git.io.
+Don't need a custom code? Use a bare URL (no code) and Git.io will generate a random 4-letter code for you.
 
-Notice that once you've created a tiny URL, there's no way to undo this action. Your best option is to contact GitHub support and ask if they will remove it for you.
+Notice that once you've created a new URL, there's no way to undo this action. Your best bet is to contact GitHub support and ask if they will remove it for you.
 
 ### What URLs are supported?
 
