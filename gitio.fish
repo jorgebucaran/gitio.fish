@@ -1,4 +1,4 @@
-set -g gitio_version 1
+set -g gitio_version 1.0.0
 
 function gitio
     switch "$argv"
