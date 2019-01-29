@@ -5,9 +5,9 @@ function gitio
         case {,-}-v{ersion,}
             echo gitio version $gitio_version
         case {,-}-h{elp,} ""
-            echo "usage: gitio [<code>=]<url>   Create a short GitHub URL (git.io/<code>)"
+            echo "usage: gitio [<code>=]<url>   Create a Git.io URL (git.io/<code>)"
             echo "       gitio --help           Display this help"
-            echo "       gitio --version        Display current version"
+            echo "       gitio --version        Display the current version"
             echo "examples:"
             echo "       gitio https://github.com/user/repo"
             echo "       gitio repo=https://github.com/user/repo"
@@ -32,7 +32,7 @@ function gitio
             ' | read -l url code
 
             if not set -q url[1]
-                echo "gitio: invalid URL or code: \"$argv\"" >&2
+                echo "gitio: invalid URL or code \"$argv\"" >&2
                 return 1
             end
 
@@ -57,7 +57,7 @@ function gitio
                     case 2
                         echo "gitio: https://git.io/$code is not available -- try a different code" >&2
                     case \*
-                        echo "gitio: git.io is not available -- are you offline?" >&2
+                        echo "gitio: service unavailable -- are you offline?" >&2
                 end
                 return 1
             end
