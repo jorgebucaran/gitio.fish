@@ -1,6 +1,6 @@
 set -g gitio_version 1.0.0
 
-function gitio
+function gitio -d "Create a Git.io URL (git.io/<code>)"
     switch "$argv"
         case {,-}-v{ersion,}
             echo gitio version $gitio_version
