@@ -7,7 +7,7 @@
 
 ## Installation
 
-Install with [Fisher](https://github.com/jorgebucaran/fisher):
+Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
 
 ```
 fisher add jorgebucaran/fish-gitio
@@ -40,7 +40,7 @@ rm -f $XDG_CONFIG_HOME/fish/functions/gitio.fish && functions -e gitio
 
 ## Usage
 
-You want to create a short URL for your GitHub profile page, repositories, issues, release notes, tarballs, gists—you name it.
+You want to create a short URL for your GitHub profile, repositories, issues, release notes, tarballs, gists, etc.
 
 How do you do that? Here's how I did it for this repository.
 
@@ -48,21 +48,23 @@ How do you do that? Here's how I did it for this repository.
 gitio fish-gitio=https://github.com/jorgebucaran/fish-gitio
 ```
 
-The `gitio` command takes an optional vanity code, followed by an equal sign, and the GitHub URL. Don't need a vanity code? Use a bare URL (no code) and Git.io will generate a random 4-letter string for you.
+The `gitio` command takes a vanity code, followed by an equal sign, and a GitHub URL (see [supported hosts](#supported-hosts)).
 
-If the command exits successfully, the short URL will be displayed on your console.
+```
+gitio code=url
+```
+
+Don't need a vanity code? Just enter the URL and Git.io will generate a random code automatically. If the command exits successfully, your new URL will be displayed on the console.
 
 Notice that once you've created a URL, there's no way to undo this. Your best bet is to contact GitHub Support and ask if they will remove it for you.
 
-## Supported URLs
+## Supported Hosts
 
-| Hostname                           | Example                                                                                                |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| https://github.com                 | https://github.com/jorgebucaran/fish-gitio <br> https://github.com/jorgebucaran/fish-gitio/issues <br> |
-| https://gist.github.com            | https://gist.github.com/jorgebucaran/c7954376c...5bb85feabb8                                           |
-| https://codeload.github.com        | https://codeload.github.com/jorgebucaran/fish-gitio/tar.gz/master                                      |
-| https://raw.githubusercontent.com  | https://raw.githubusercontent.com/jorgebucaran/fish-gitio/master/gitio.fish                            |
-| https://gist.githubusercontent.com | https://gist.githubusercontent.com/jorgebucaran/c796.../raw/894a.../gitio.svg                          |
+- https://github.com
+- https://gist.github.com
+- https://codeload.github.com
+- https://raw.githubusercontent.com
+- https://gist.githubusercontent.com
 
 ## License
 
