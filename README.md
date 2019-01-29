@@ -40,13 +40,13 @@ You want to create a short URL for your GitHub profile, repositories, issues, re
 
 How do you do that? Here's how I did it for this repository.
 
-```fish
+```properties
 gitio fish-gitio=https://github.com/jorgebucaran/fish-gitio
 ```
 
 The `gitio` command takes a vanity code, followed by an equal sign, and a GitHub URL (see [supported hosts](#supported-hosts)).
 
-```
+```properties
 gitio code=url
 ```
 
