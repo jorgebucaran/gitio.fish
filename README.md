@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/jorgebucaran/fish-gitio.svg)](https://travis-ci.org/jorgebucaran/fish-gitio)
 [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-gitio.svg?label=latest)](https://github.com/jorgebucaran/fish-gitio/releases)
 
-[Git.io](https://git.io) CLI for the [fish shell](https://fishshell.com). Create a short URL like <[git.io/fish-gitio](https://git.io/fish-gitio)> for any GitHub URL.
+<a href=https://git.io title="GitHub URL Shortener">Git.io</a> CLI for the [fish shell](https://fishshell.com). Create your own URL like https://git.io/fish-gitio.
 
 ## Installation
 
