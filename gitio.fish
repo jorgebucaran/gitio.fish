@@ -1,4 +1,4 @@
-set -g gitio_version 1.0.0
+set -g gitio_version 1.0.1
 
 function gitio -d "Create a Git.io URL (git.io/<code>)"
     switch "$argv"
