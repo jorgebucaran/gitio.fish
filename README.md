@@ -25,11 +25,7 @@ set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
 curl https://git.io/gitio.fish --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/gitio.fish
 ```
 
-To uninstall it from your system, remove the file and erase the function.
-
-```
-rm -f $XDG_CONFIG_HOME/fish/functions/gitio.fish && functions -e gitio
-```
+To uninstall, remove the file.
 
 </details>
 
