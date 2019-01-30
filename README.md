@@ -18,7 +18,7 @@ fisher add jorgebucaran/fish-gitio
 
 ---
 
-Copy [`gitio.fish`](gitio.fish) to any directory on your functions path.
+Copy [`gitio.fish`](gitio.fish) to any directory on your function path.
 
 ```fish
 set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
