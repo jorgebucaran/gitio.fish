@@ -36,7 +36,7 @@ To uninstall, remove the file.
 
 ## Usage
 
-You want to create a short URL for your GitHub profile, repositories, issues, release notes, tarballs, gists, etc.
+You want to create a short URL for your GitHub profile, repositories, issues, release notes, tarballs, gists.
 
 How do you do that? Here's how I did it for this repository.
 
@@ -52,7 +52,7 @@ gitio code=url
 
 Don't need a vanity code? Just enter the URL and Git.io will generate a random code automatically. If the command exits successfully, your new URL will be displayed on the console.
 
-Notice that once you've created a URL, there's no way to undo this. Your best bet is to contact GitHub Support and ask if they will remove it for you.
+Notice that once you've created a URL, there's no way to undo this. Your best bet is to contact GitHub Support and ask if they would remove it for you.
 
 ## Supported Hosts
 
