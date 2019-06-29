@@ -1,6 +1,6 @@
 # fish-gitio [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-gitio.svg?label=&color=0080FF)](https://github.com/jorgebucaran/fish-gitio/releases/latest) [![Travis CI](https://img.shields.io/travis/jorgebucaran/fish-gitio.svg?label=)](https://travis-ci.org/jorgebucaran/fish-gitio)
 
-> <a href=https://git.io title="GitHub URL Shortener">Git.io</a> CLI for the [fish shell](https://fishshell.com).
+> Create a tiny URL. Powered by <a href=https://git.io title="GitHub URL Shortener">Git.io</a>.
 
 ## Installation
 
@@ -22,7 +22,7 @@ set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
 curl https://git.io/gitio.fish --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/gitio.fish
 ```
 
-To uninstall, remove the file.
+To uninstall it, remove `gitio.fish`.
 
 </details>
 
@@ -33,21 +33,21 @@ To uninstall, remove the file.
 
 ## Usage
 
-You want to create a short URL for your GitHub profile, repositories, issues, release notes, tarballs, gists. How do you do that? Here's how I did it here.
+You want to create a short URL for your GitHub profile, repositories, issues, release notes, gists, anything. Here's how you can do that.
 
 ```properties
 gitio fish-gitio=https://github.com/jorgebucaran/fish-gitio
 ```
 
-The `gitio` command takes a custom code, followed by an equal sign, and a GitHub URL (see [supported hosts](#supported-hosts)).
+The `gitio` command expects a key, followed by an equal sign, and a GitHub URL (see [supported hosts](#supported-hosts)).
 
 ```properties
-gitio code=url
+gitio key=url
 ```
 
-Don't need a custom code? Just enter the URL and Git.io will generate a random code automatically. If the command exits successfully, your new URL will be displayed on the console.
+Don't need a custom key? Just enter the URL and Git.io will generate a random code automatically. If the command exits successfully, your new URL will be displayed on the console.
 
-Notice that once you've created a URL, there's no way to undo this. Your best bet is to contact GitHub Support and ask if they would remove it for you.
+> **Note:** Once you've created a URL, there's no way to undo it. If you mess up, contact GitHub Support and ask them to remove it for you.
 
 ## Supported Hosts
 
