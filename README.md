@@ -33,13 +33,13 @@ To uninstall it, remove `gitio.fish`.
 
 ## Usage
 
-You want to create a short URL for your GitHub profile, repositories, issues, release notes, gists, anything. Here's how you can do that.
+You want to create a short URL for your GitHub profile, repositories, issues, release notes, gists, etc. Here's how:
 
 ```properties
 gitio fish-gitio=https://github.com/jorgebucaran/fish-gitio
 ```
 
-The `gitio` command expects a key, followed by an equal sign, and a GitHub URL (see [supported hosts](#supported-hosts)).
+The `gitio` command takes a key, followed by an `=`, and a GitHub URL (see [supported hosts](#supported-hosts)).
 
 ```properties
 gitio key=url
