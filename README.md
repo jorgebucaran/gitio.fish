@@ -1,4 +1,4 @@
-# fish-gitio [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-gitio.svg?label=&color=0080FF)](https://github.com/jorgebucaran/fish-gitio/releases/latest) [![Travis CI](https://img.shields.io/travis/jorgebucaran/fish-gitio.svg?label=)](https://travis-ci.org/jorgebucaran/fish-gitio)
+# fish-gitio [![Releases](https://img.shields.io/github/release/jorgebucaran/fish-gitio.svg?label=&color=0080FF)](https://github.com/jorgebucaran/fish-gitio/releases/latest)
 
 > Create a tiny URL. Powered by <a href=https://git.io title="GitHub URL Shortener">Git.io</a>.
 
