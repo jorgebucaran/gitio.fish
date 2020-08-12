@@ -13,4 +13,4 @@ jobs:
           sudo apt-get -y install fish
       - run: |
           curl git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-          fish -c "fisher add . && gitio https://github.com/jorgebucaran/fish-gitio"
+          fish -c "fisher add . && gitio https://github.com/jorgebucaran/gitio.fish"
