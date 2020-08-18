@@ -25,7 +25,7 @@ To uninstall, just remove `gitio.fish`.
 
 </details>
 
-## Getting Started
+## Quickstart
 
 You want to create a short URL for your GitHub repos, issues, gists, etc. Here's how to do that with `gitio`:
 
