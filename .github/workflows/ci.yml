@@ -19,5 +19,5 @@ jobs:
         shell: fish {0}
 
       - name: Install Gitio
-        run: $GITHUB_WORKSPACE/ && fisher install . && gitio https://github.com/jorgebucaran/gitio.fish
+        run: fisher install jorgebucaran/gitio.fish && gitio super=https://github.com/jorgebucaran/superfine
         shell: fish {0}
