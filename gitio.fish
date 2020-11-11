@@ -33,8 +33,8 @@ function gitio -d "Create a git.io URL"
                 return 1 
             end
 
-            set -l opts -si https://git.io --data-urlenkey "url=$url"
-            set -q key[1] && set opts $opts --data-urlenkey key="$key"
+            set -l opts -si https://git.io --data-urlencode "url=$url"
+            set -q key[1] && set opts $opts --data-urlencode code="$key"
             set -l resp (command curl $opts | string collect)
 
             if string match --quiet --regex '^HTTP/1\.1 422' $resp
