@@ -19,5 +19,7 @@ jobs:
         shell: fish {0}
 
       - name: Install Gitio
-        run: fisher install jorgebucaran/gitio.fish && gitio super=https://github.com/jorgebucaran/superfine
+        run: |
+          fisher install jorgebucaran/gitio.fish
+          gitio super=https://github.com/jorgebucaran/superfine
         shell: fish {0}
