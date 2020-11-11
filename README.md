@@ -1,56 +1,33 @@
 # gitio.fish
 
-> Create a tiny GitHub URL. Powered by <a href=https://git.io title="GitHub URL Shortener">Git.io</a>.
+> Create a [git.io](https://git.io) URL.
 
 ## Installation
 
-Install with [Fisher](https://github.com/jorgebucaran/fisher) (recommended):
+With [Fisher](https://github.com/jorgebucaran/fisher):
 
 ```console
-fisher add jorgebucaran/gitio.fish
+fisher install jorgebucaran/gitio.fish
 ```
-
-<details>
-<summary>Not using a package manager?</summary>
-
-###
-
-Copy [`gitio.fish`](gitio.fish) to any directory on your function path.
-
-```fish
-curl https://git.io/gitio.fish --create-dirs -sLo ~/.config/fish/functions/gitio.fish
-```
-
-To uninstall, just remove `gitio.fish`.
-
-</details>
 
 ## Quickstart
 
 You want to create a short URL for your GitHub repos, issues, gists, etc. Here's how to do that with `gitio`:
 
-```properties
-gitio super=https://github.com/jorgebucaran/superfine
-https://git.io/super
-```
+<pre>
+$ gitio super=https://github.com/jorgebucaran/superfine
+<a href=https://git.io/super>https://git.io/super</a>
+</pre>
 
-The `gitio` command expects a key, followed by an `=`, and a GitHub URL (see [supported hosts](#supported-hosts) below).
+You can enter a custom key, followed by an `=`, and a GitHub URL.
 
 ```properties
 gitio key=url
 ```
 
-Don't need a custom key? Just type the GitHub URL after `gitio` and we'll generate a random one for you. If the command exits successfully, the new URL will be displayed on your console.
+Or just enter any GitHub URL and we'll generate a random git.io URL for you.
 
-> **Note:** Once you've created a URL, there's no way to undo it. If you mess something up, contact GitHub Support and ask them to remove it for you.
-
-## Supported Hosts
-
-- https://github.com
-- https://gist.github.com
-- https://codeload.github.com
-- https://raw.githubusercontent.com
-- https://gist.githubusercontent.com
+> **Warning:** Once you've created a URL, there's no way to undo it. Take it easy!
 
 ## License
 
