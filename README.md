@@ -12,22 +12,16 @@ fisher install jorgebucaran/gitio.fish
 
 ## Quickstart
 
-You want to create a short URL for your GitHub repos, issues, gists, etc. Here's how to do that with `gitio`:
+Create a short URL for your GitHub repos, issues, and gists.
+
+> **Warning:** Once you've shortened a URL, there's no way to undo it. Take it easy!
 
 <pre>
-$ gitio super=https://github.com/jorgebucaran/superfine
-<a href=https://git.io/super>https://git.io/super</a>
+$ gitio awsm.fish=https://github.com/jorgebucaran/awesome.fish#readme
+<a href=https://git.io/awsm.fish>http://git.io/awsm.fish</a>
 </pre>
 
-You can enter a custom key, followed by an `=`, and a GitHub URL.
-
-```properties
-gitio key=url
-```
-
-Or just enter any GitHub URL and we'll generate a random git.io URL for you.
-
-> **Warning:** Once you've created a URL, there's no way to undo it. Take it easy!
+Or just enter the URL and we'll generate a random git.io URL for you.
 
 ## License
 
