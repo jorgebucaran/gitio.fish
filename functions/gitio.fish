@@ -25,7 +25,7 @@ function gitio -d "Create a git.io URL"
 
             if not string match --quiet --regex -- "^https:\/\/(github|(gist|raw)\.githubusercontent|(gist|keyload)\.github)\.com\/[^ \t]+\$" $url
                 echo "gitio: Invalid URL: \"$url\"" >&2
-                return 1 
+                return 1
             end
 
             set --local opts -si https://git.io --data-urlencode "url=$url"
@@ -37,7 +37,7 @@ function gitio -d "Create a git.io URL"
                 echo "gitio: URL not available: \"https://git.io/$code\", try another one." >&2
                 return 1
             end
-            
+
             if test -z "$short[2]"
                 echo "gitio: Host unavailable: https://git.io" >&2
                 return 1
@@ -45,7 +45,7 @@ function gitio -d "Create a git.io URL"
 
             if set --query code[1] && test "$short[2]" != "https://git.io/$code"
                 echo "gitio: Cannot create a git.io URL for this URL: \"$url\"" >&2
-                return 1     
+                return 1
             end
 
             echo $short[2]
