@@ -1,4 +1,4 @@
-function gitio -d "Create a git.io URL"
+function gitio --description "Create a git.io URL"
     switch "$argv"
         case -v --version
             echo "gitio, version 1.0.0"
@@ -28,13 +28,13 @@ function gitio -d "Create a git.io URL"
                 return 1
             end
 
-            set --local opts -si https://git.io --data-urlencode "url=$url"
+            set --local opts --silent --include https://git.io --data-urlencode "url=$url"
             set --query code[1] && set opts $opts --data-urlencode code="$code"
             set --local resp (command curl $opts | string collect)
             set --local short (string replace --all \r "" $resp | string match --regex -- "Location: ([^ ]+)")
 
             if string match --quiet --regex -- "^HTTP/1\.1 422" $resp
-                echo "gitio: URL not available: \"https://git.io/$code\", try another one." >&2
+                echo "gitio: URL not available: \"https://git.io/$code\", try another one" >&2
                 return 1
             end
 
