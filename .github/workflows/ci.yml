@@ -17,6 +17,6 @@ jobs:
       - name: Install Tools
         run: |
           curl -sL https://git.io/fisher | source
-          fisher install $GITHUB_WORKSPACE
-          test (gitio awsm.fish=https://github.com/jorgebucaran/awesome.fish#readme) = https://git.io/awsm.fish
+          fisher install jorgebucaran/fishtape $GITHUB_WORKSPACE
+          fishtape test/*
         shell: fish {0}
