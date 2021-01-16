@@ -30,8 +30,7 @@ function gitio --description "Create a git.io URL"
             end
 
             set --local options --silent --include https://git.io --data-urlencode "url=$url"
-            set --query code[1] &&
-                set options $options --data-urlencode code="$code"
+            set --query code[1] && set options $options --data-urlencode code="$code"
             set --local resp (curl $options | string collect)
             set --local tiny (
                 string replace --all -- \r "" $resp |
