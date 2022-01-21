@@ -1,4 +1,6 @@
-# gitio.fish
+> :wave: [Git.io no longer accepts new URLs](https://github.blog/changelog/2022-01-11-git-io-no-longer-accepts-new-urls/). Time to say goodbye! 
+
+# ~~gitio.fish~~
 
 > Create a custom [git.io](https://git.io) URL.
 
